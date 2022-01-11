@@ -1,0 +1,130 @@
+/* CSS Rest */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Project starts here */
+
+body{
+    font-family: sans-serif;
+    background: linear-gradient(115deg, rgba(240, 241, 241, 0.8),rgba(30, 29, 31, 0.5));
+    height: 100vh;
+}
+
+#title{
+    text-align: center;
+    padding: 0.8rem 0;
+    font-size: 3rem;
+    color: white;
+    background: rgba(223, 5, 5, 0.89);
+}
+
+.questions{
+    margin: 1rem auto;
+    width: 68vw;
+    padding: 2rem;
+    background: lightblue;
+    border-radius: 1rem;
+}
+
+#question{
+    margin-bottom: 1rem;
+}
+
+.option{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    border-bottom: solid 0.1rem black;
+    max-width: 100%;
+    background: white;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.option:hover{
+    color: white;
+}
+
+ol{
+    position: relative;
+    padding: 0 1.5rem;
+    color: black;
+}
+
+span{
+    display: block;
+    padding: 0.1rem 0.7rem;
+}
+
+#answer{
+    margin-top: 2.5rem;
+}
+
+#stat{
+    margin-top: 1.5rem;
+    color: darkblue;
+}
+
+.buttons{
+    text-align: center;
+}
+
+button{
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    border-radius: .75rem;
+    color: white;
+    background: rgba(223, 5, 5, 0.89);ed;
+    cursor: pointer;
+}
+
+button:active{
+    background: rgba(30, 29, 31, 0.5);
+}
+
+#scoreboard, #answerBank{
+    width: 20rem;
+    background: rgba(230,230,250,0.77);
+    padding: 2rem;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 5rem;
+    display: none;
+}
+
+#score-title{
+    margin: 1rem 0;
+}
+
+#score-btn, #check-answer{
+    margin-top: 1rem;
+}
+
+#score{
+    font-size: 2.5rem;
+}
+
+#answerBank li{
+    text-align: left;
+    margin-bottom: 0.2rem;
+    font-size: larger;
+}
+
+#answers{
+    margin-top: 1rem;
+    list-style-type: none;
+}
+
+#answers li:nth-child(even) {
+    margin-bottom: 5%;
+}
+
+#answerBank {
+    width: 65rem;
+    top: 3rem;
+}
