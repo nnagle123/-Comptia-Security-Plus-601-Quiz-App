@@ -120,7 +120,7 @@ button:active{
     list-style-type: none;
 }
 
-#answers li:nth-child(even) {
+#answers li:nth-child(3n) {
     margin-bottom: 5%;
 }
 
