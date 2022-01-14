@@ -9,58 +9,58 @@ var questionList = [
     explanation : 'Organized Crime are usually looking for financial gain, Nation State Actors are government entities, Competitors are usually looking to disrupt business, Hacktivists are individuals motivated by a cause'
 },
 {
-    question : 'An attacker asks an employee to hold the door open for them so they can have access to the building.  What type of Social Engineering attack is this?',
+    question : 'An attacker asks an employee to hold the door that should be locked open for them so they can have access to the building.  What type of Social Engineering attack is this?',
     options : ['Watering Hole', 'Shoulder Surfing', 'Tailgating', 'Impersonation'],
     answer : 'Tailgating',
-    explanation : "No explanation yet"
+    explanation : "Tailgating is gaining physical access into a controlled facility by closely following an authorized person through the access point."
 },
 {
     question : 'Your CEO has received a very personalized email requesting personal information.  What type of attack is this?',
     options : ['Phishing','Vishing','Smishing','Whaling'],
     answer : 'Whaling',
-    explanation : "No explanation yet"
+    explanation : "Whaling is a type of Phishing attack that is targeted at a high-profile user"
 },
 {
     question : "All of the devices are suddenly encrypted on the birthday of an employee fired who was fired 6 months ago.  What is the probable attack?",
     options : ['A Birthday Attack','Logic Bomb','Ransomeware','Backdoor'],
     answer : 'Logic Bomb',
-    explanation : "No explanation yet"
+    explanation : "A Logic Bomb is a virus or malware that is triggered to detonate on a specific date."
 },
 {
     question : 'If you can use the URL path to access locations of a Web Application that you shouldnt be able to access, what type of attack are you vulnerable to?',
     options : ['Directory Traversal', 'DNS Poisioning', 'Buffer Overflow', 'URL Hijacking'],
     answer : 'Directory Traversal',
-    explanation : "No explanation yet"
+    explanation : "Directory Traversal is working your way though the directories to try and access things you shouln't be able too.  The attacker will do this by adding multiple change directory commands in the URL file path.  Think adding: ../../../ in the URL file path to move up three levels (../ is the command line command to move up one level.)"
 },
 {
-    question : 'Your Application crashes the server when adding input values that are higher than the system can handle or was intended to handel.  What type of attack are you vulnerable to?',
+    question : 'Your Application crashes the server when adding input values that are higher than the system can handle or was intended to handle.  What type of attack are you vulnerable to?',
     options : ['Directory Traversal', 'Session Hijacking', 'Buffer Overflow', 'Cross-Site Scripting'],
     answer : 'Buffer Overflow',
-    explanation : "No explanation yet"
+    explanation : "Buffer Overflow is an attack where the attacker will intentionally input more data than the program can handle which can crash the system and give the attacker administrative privileges."
 },
 {
     question : 'What is the name for a Security Weakness that could be exploited?',
     options : ['Vulnerability', 'Exploit', 'Attack Surface', 'Bug Bounty'],
     answer : 'Vulnerability',
-    explanation : "No explanation yet"
+    explanation : "a vulnerability is a Security Weakness that could be exploited."
 },
 {
     question : 'Which ports does FTP use?',
     options : ['port 123 & port 120', 'port 421 & port 420', 'port 80 & port 8080', 'port 20 & port 21'],
     answer : 'port 20 & port 21',
-    explanation : "No explanation yet"
+    explanation : "FTP uses port 20 & 21.  HTTP uses port 80.  Webcache uses port 8080. Network Time Protocol(NTP) uses port 123. "
 },
 {
-    question : 'Which protocol provides connectionless integrity, data origin authentication, replay protection, and confidentiality (encryption) using Authentication Header (AH) and Encapsulating Security Payload (ESP)?',
+    question : 'Which protocol provides connectionless integrity, data origin authentication, replay protection, and encryption using Authentication Header and Encapsulating Security Payload?',
     options : ['SSH', 'IPSec', 'TCP', 'SFTP'],
     answer : 'IPSec',
-    explanation : "No explanation yet"
+    explanation : "Internet Protocol Security (IPsec) is a secure network protocol suite that authenticates and encrypts the packets of data to provide secure encrypted communication between two computers over an Internet Protocol network. It is used in virtual private networks (VPNs)."
 },
 {
     question : 'What is an entity that issues and manages certificates?',
     options : ['CA', 'DNS', 'URL', 'Whois'],
     answer : 'CA',
-    explanation : "No explanation yet"
+    explanation : "CA (Certificate Authority) is an entity that issues digital certificates. A digital certificate certifies the ownership of a public key by the named subject of the certificate. This allows others (relying parties) to rely upon signatures or on assertions made about the private key that corresponds to the certified public key. A CA acts as a trusted third party—trusted both by the subject (owner) of the certificate and by the party relying upon the certificate."
 },
 {
     question : 'Which type of attack searches long lists of words for a particular language to match them to an encrypted password?',
@@ -78,7 +78,7 @@ var questionList = [
     question : 'Which port does NTP use?',
     options : ['port 123', 'port 21', 'port 80', 'port 44'],
     answer : 'port 123',
-    explanation : "No explanation yet"
+    explanation : "Network Time Protocol (NTP) uses port 123.  File Transfer Protocol (FTP) uses port 21.  HTTP uses prot 80.  port 44 was just random."
 }, 
 {
     question : "At which OSI layer does IP Security (IPSec) operate?",
@@ -228,13 +228,13 @@ var questionList = [
     question : "Which port does SSL use?",
     options : ["port 80", "port 8080", "port 123", "port 443"],
     answer : "port 443",
-    explanation : "No explanation yet"
+    explanation : "HTTPS uses port 443.  HTTP uses port 80.  Webcache uses port 8080. Network Time Protocol (NTP) uses port 123."
 },
 {
     question : "Which type of controls include developing policies and procedures, screening personnel, conducting security awareness training, and implementing change control?",
     options : ["Physical Controls", "Endpoint Controls", "Administrative Controls", "Compensating Controls"],
     answer : "Administrative Controls",
-    explanation : "No explanation yet"
+    explanation : "Administrative Controls "
 },
 {
     question : "You are conducting a penetration test, you already have a few accounts but you notice that there is another system on the network and you can use the same accounts and user types as the one you already have. What type of technique is this?",
@@ -405,15 +405,49 @@ var questionList = [
     explanation : "No explanation yet"
 },
 {
-    question : "is a type of network attack in which the ARP cache of systems on the network is modified to associate an IP address with the MAC address of the attacker’s system.",
+    question : "_________ is a type of network attack in which the ARP cache of systems on the network is modified to associate an IP address with the MAC address of the attacker’s system.",
     options : ["ARP Poisoning", "DoS", "DNS Amplification", "SYN Flood"],
     answer : "ARP Poisoning",
-    explanation : "No explanation yet"
+    explanation : "ARP Poisoning stands for Address Resolution Protocol Poisoning and is what's defined in this question."
+},
+{
+    question : "Which of the following is when all of the names in a dataset have been changed, but enough information has been kept in that someone could potentially connect it to the original information?",
+    options : ["anonymization", "data masking", "pseudo-anonymization", "tokenization"],
+    answer : "pseudo-anonymization",
+    explanation : "pseudo-anonymization is where names have been changed, but could still be reversed.  Data masking will change the original data and hide Personally Identifiable Information (PII). Tokenization replaces data with a token - think credit cards. Anonymization modifies the data to protect PII"
 }
+// ^^^^^ If you add another question, you will need a comma here.
+
+
 // {
 //     question : "",
 //     options : ["", "", "", ""],
-//     answer : ""
+//     answer : "",
+//     explanation : "",
+// }, 
+// {
+//     question : "",
+//     options : ["", "", "", ""],
+//     answer : "",
+//     explanation : "",
+// },
+  // {
+//     question : "",
+//     options : ["", "", "", ""],
+//     answer : "",
+//     explanation : "",
+// },  
+// {
+//     question : "",
+//     options : ["", "", "", ""],
+//     answer : "",
+//     explanation : "",
+// },  
+// {
+//     question : "",
+//     options : ["", "", "", ""],
+//     answer : "",
+//     explanation : "",
 // },  
 // ^^^ Note the last question must not have a comma after the curly bracket 
 ]
