@@ -453,17 +453,45 @@ var questionList = [
 ]
 
 var question = document.getElementById('question');
+var radioInput = document.querySelectorAll('input[name="size"]');
+let selectedSize;
+var startContainer = document.getElementById('start-container');
 var quizContainer = document.getElementById('quiz-container');
+var startButton = document.getElementById('start-button');
 var scorecard = document.getElementById('scorecard');
 var option0 = document.getElementById('option0');
 var option1 = document.getElementById('option1');
 var option2 = document.getElementById('option2');
 var option3 = document.getElementById('option3');
 var next = document.querySelector('.next');
+var start = document.querySelector('.start');
 var points = document.getElementById('score');
 var span = document.querySelectorAll('span');
 var i = 0;
 var score = 0;
+
+
+//start game
+function startGame(){ 
+    startContainer.style.display = 'none';
+    startButton.style.display = 'none';
+    quizContainer.style.display = 'block';
+    displayQuestion()
+}
+start.addEventListener('click', startGame);
+
+
+
+//select game size
+// startButton.addEventListener("click", () => {
+//     let selectedSize;
+//     for (const radioButton of radioButtons) {
+//         if (radioButton.checked) {
+//             selectedSize = radioButton.value;
+//             break;
+//         }
+//     }
+
 
 //function to display questions
 function displayQuestion(){
