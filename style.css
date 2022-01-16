@@ -1,4 +1,4 @@
-/* CSS Rest */
+/* CSS Reset */
 *{
     margin: 0;
     padding: 0;
@@ -6,13 +6,13 @@
 }
 
 /* Project starts here */
-
 body{
     font-family: sans-serif;
     background: linear-gradient(115deg, rgba(240, 241, 241, 0.8),rgba(30, 29, 31, 0.5));
     height: 100vh;
 }
 
+/* Header */
 #title{
     text-align: center;
     padding: 0.8rem 0;
@@ -21,7 +21,8 @@ body{
     background: rgba(223, 5, 5, 0.89);
 }
 
-.questions{
+/* Start Screen */
+#start-container{
     margin: 1rem auto;
     width: 68vw;
     padding: 2rem;
@@ -29,8 +30,35 @@ body{
     border-radius: 1rem;
 }
 
+#howmany {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.radioicons {
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.size {
+    margin-left: 1rem;
+}
+
+/* Questions */
+#quiz-container {
+    display: none;
+}
+
 #question{
     margin-bottom: 1rem;
+}
+
+.questions{
+    margin: 1rem auto;
+    width: 68vw;
+    padding: 2rem;
+    background: lightblue;
+    border-radius: 1rem;
 }
 
 .option{
