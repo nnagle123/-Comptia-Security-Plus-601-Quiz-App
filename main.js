@@ -557,7 +557,7 @@ function checkAnswer(){
         answers.appendChild(checkAnswerQuestion);
         answers.appendChild(checkAnswerAnswer);
         answers.appendChild(checkAnswerExplanation);
-    }
+        }
 }
 
 
