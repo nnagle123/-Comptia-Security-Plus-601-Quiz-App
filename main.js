@@ -415,16 +415,23 @@ var questionList = [
     options : ["anonymization", "data masking", "pseudo-anonymization", "tokenization"],
     answer : "pseudo-anonymization",
     explanation : "pseudo-anonymization is where names have been changed, but could still be reversed.  Data masking will change the original data and hide Personally Identifiable Information (PII). Tokenization replaces data with a token - think credit cards. Anonymization modifies the data to protect PII"
+},
+{
+    question : "Which TCP/IP Port does POP3 use?",
+    options : ["Port 23", "Port 123", "Port 80", "Port 110"],
+    answer : "Port 110",
+    explanation : "POP3 uses Port 110, Telnet uses Port 23, HTTP uses Port 80, NTP (Network Time Protocol) uses port 123.",
+}, 
+{
+    question : "In what order should the Incident Response Plan Process take place?",
+    options : ["1. Preparation 2. Identification 3. Containment 4. Eradication 5. Recovery 6. Lessons Learned", "1. Lessons Learned 2. Identification 3. Containment 4. Eradication 5. Recovery 6. Preparation", "1. Identification 2. Containment 3. Eradication 4. Recovery 5. Lessons Learned 6. Preparation", "1. Containment 2. Eradication 3. Recovery 4. Lessons Learned 5. Preparation 6. Identification"],
+    answer : "1. Preparation 2. Identification 3. Containment 4. Eradication 5. Recovery 6. Lessons Learned",
+    explanation : "You want to prepare for an incident before it happens, then identify when one happens, contain it so it doesn't get any worse, eradicate the malicious software, inspect the system to see if it's still there, debreif to see what you did well and not so well.",
 }
 // ^^^^^ If you add another question, you will need a comma here.
 
 
-// {
-//     question : "",
-//     options : ["", "", "", ""],
-//     answer : "",
-//     explanation : "",
-// }, 
+
 // {
 //     question : "",
 //     options : ["", "", "", ""],
