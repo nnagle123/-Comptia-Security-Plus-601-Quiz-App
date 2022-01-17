@@ -1,6 +1,3 @@
-//Add new questions following the format below: 
-
-
 var questionList = [
 {
     question : 'Which type of threat actor is usually motivated by explicit financial gain?',
@@ -123,7 +120,7 @@ var questionList = [
     explanation : "No explanation yet"
 },
 {
-    question : "Which cryptography technique is based on a combination of two keys: a secret (private) key and a public key?",
+    question : "Which cryptography technique is based on a combination of two keys: a private key and a public key?",
     options : ["private-key cryptography", "open cryptography", "public-key cryptography", "PGP"],
     answer : "public-key cryptography",
     explanation : "No explanation yet"
@@ -428,40 +425,22 @@ var questionList = [
     answer : "1. Preparation 2. Identification 3. Containment 4. Eradication 5. Recovery 6. Lessons Learned",
     explanation : "You want to prepare for an incident before it happens, then identify when one happens, contain it so it doesn't get any worse, eradicate the malicious software, inspect the system to see if it's still there, debreif to see what you did well and not so well.",
 }
-// ^^^^^ If you add another question, you will need a comma here.
 
-
-
-// {
-//     question : "",
-//     options : ["", "", "", ""],
-//     answer : "",
-//     explanation : "",
-// },
-  // {
-//     question : "",
-//     options : ["", "", "", ""],
-//     answer : "",
-//     explanation : "",
-// },  
+// Use this ￬ as a template if you would like to add more questions. 
+// Please note the comma's for a JavaScript array of objects.
 // {
 //     question : "",
 //     options : ["", "", "", ""],
 //     answer : "",
 //     explanation : "",
 // },  
-// {
-//     question : "",
-//     options : ["", "", "", ""],
-//     answer : "",
-//     explanation : "",
-// },  
-// ^^^ Note the last question must not have a comma after the curly bracket 
-]
+
+];
 
 var question = document.getElementById('question');
-var radioInput = document.querySelectorAll('input[name="size"]');
-let selectedSize;
+var rb10 = document.getElementById('10');
+var rb25 = document.getElementById('25');
+var rb50 = document.getElementById('50');
 var startContainer = document.getElementById('start-container');
 var quizContainer = document.getElementById('quiz-container');
 var startButton = document.getElementById('start-button');
@@ -476,10 +455,11 @@ var points = document.getElementById('score');
 var span = document.querySelectorAll('span');
 var i = 0;
 var score = 0;
+let quizLength;
 let randomQuesiton;
 
 
-//start game
+//Start game + Hide start menu
 function startGame(){ 
     startContainer.style.display = 'none';
     startButton.style.display = 'none';
@@ -489,33 +469,37 @@ function startGame(){
 start.addEventListener('click', startGame);
 
 
-
-//select game size
-// startButton.addEventListener("click", () => {
-//     let selectedSize;
-//     for (const radioButton of radioButtons) {
-//         if (radioButton.checked) {
-//             selectedSize = radioButton.value;
-//             break;
-//         }
-//     }
-
-
-//function to display questions
+//Display questions
 function displayQuestion(){
     for(var a = 0; a < span.length; a++){
         span[a].style.background='none';
     }
-    randomQuesiton = questionList.sort(() => Math.random() - .5)
+    // Randomize question order
+    randomQuesiton = questionList.sort(() => Math.random() - .5);
+
+    // Get desired number of questions from the radio buttons
+    if (rb10.checked == true) {
+        quizLength = randomQuesiton.splice(10);
+    } 
+    else if (rb25.checked == true) {
+        quizLength = randomQuesiton.splice(25);
+    } 
+    else if (rb50.checked == true) {
+        quizLength = randomQuesiton.splice(50);
+    }
+
+    // Display question
     question.innerHTML = randomQuesiton[i].question;
     option0.innerHTML = randomQuesiton[i].options[0];
     option1.innerHTML = randomQuesiton[i].options[1];
     option2.innerHTML = randomQuesiton[i].options[2];
     option3.innerHTML = randomQuesiton[i].options[3];
+
+    // Display question counter
     stat.innerHTML = (i+1)+'/'+randomQuesiton.length;
 }
 
-//add up score
+//Add up score + change color for correct & incorrect answers
 function addToScore(e){
     if(e.innerHTML === randomQuesiton[i].answer && score < randomQuesiton.length){
         score = score + 1;
@@ -526,7 +510,7 @@ function addToScore(e){
     setTimeout(nextQuestion, 300);
 }
 
-//function to display next question
+//Display next question
 function nextQuestion(){
     if(i < randomQuesiton.length - 1)
     {
@@ -536,20 +520,17 @@ function nextQuestion(){
     else{
         points.innerHTML = score+ '/' + randomQuesiton.length;
         quizContainer.style.display = 'none';
-        scoreboard.style.display = 'block'
+        scoreboard.style.display = 'block';
     }
 }
-
-//Skip question
 next.addEventListener('click', nextQuestion);
 
-//Try again at the end
+//Try again
 function tryAgain(){
     location.reload();
 }
 
-//function to show answers
-
+//Show answers after the quiz
 function checkAnswer(){
     var answerBank = document.getElementById('answerBank');
     var answers = document.getElementById('answers');
