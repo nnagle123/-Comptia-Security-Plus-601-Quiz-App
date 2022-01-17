@@ -476,6 +476,7 @@ var points = document.getElementById('score');
 var span = document.querySelectorAll('span');
 var i = 0;
 var score = 0;
+let randomQuesiton;
 
 
 //start game
@@ -505,17 +506,18 @@ function displayQuestion(){
     for(var a = 0; a < span.length; a++){
         span[a].style.background='none';
     }
-    question.innerHTML = questionList[i].question;
-    option0.innerHTML = questionList[i].options[0];
-    option1.innerHTML = questionList[i].options[1];
-    option2.innerHTML = questionList[i].options[2];
-    option3.innerHTML = questionList[i].options[3];
-    stat.innerHTML = (i+1)+'/'+questionList.length;
+    randomQuesiton = questionList.sort(() => Math.random() - .5)
+    question.innerHTML = randomQuesiton[i].question;
+    option0.innerHTML = randomQuesiton[i].options[0];
+    option1.innerHTML = randomQuesiton[i].options[1];
+    option2.innerHTML = randomQuesiton[i].options[2];
+    option3.innerHTML = randomQuesiton[i].options[3];
+    stat.innerHTML = (i+1)+'/'+randomQuesiton.length;
 }
 
 //add up score
 function addToScore(e){
-    if(e.innerHTML === questionList[i].answer && score < questionList.length){
+    if(e.innerHTML === randomQuesiton[i].answer && score < randomQuesiton.length){
         score = score + 1;
         document.getElementById(e.id).style.background = 'lightgreen';
     } else {
@@ -526,13 +528,13 @@ function addToScore(e){
 
 //function to display next question
 function nextQuestion(){
-    if(i < questionList.length - 1)
+    if(i < randomQuesiton.length - 1)
     {
         i = i + 1;
         displayQuestion();
     }
     else{
-        points.innerHTML = score+ '/' + questionList.length;
+        points.innerHTML = score+ '/' + randomQuesiton.length;
         quizContainer.style.display = 'none';
         scoreboard.style.display = 'block'
     }
@@ -554,13 +556,13 @@ function checkAnswer(){
     answerBank.style.display = 'block';
     scoreboard.style.display = 'none';
 
-    for(var i = 0; i < questionList.length; i++) {
+    for(var i = 0; i < randomQuesiton.length; i++) {
         var checkAnswerQuestion = document.createElement('li');
         var  checkAnswerAnswer = document.createElement('li');
         var checkAnswerExplanation = document.createElement('li');
-        checkAnswerQuestion.innerHTML= questionList[i].question;
-        checkAnswerAnswer.innerHTML = questionList[i].answer;
-        checkAnswerExplanation.innerHTML = questionList[i].explanation;
+        checkAnswerQuestion.innerHTML= randomQuesiton[i].question;
+        checkAnswerAnswer.innerHTML = randomQuesiton[i].answer;
+        checkAnswerExplanation.innerHTML = randomQuesiton[i].explanation;
         answers.appendChild(checkAnswerQuestion);
         answers.appendChild(checkAnswerAnswer);
         answers.appendChild(checkAnswerExplanation);
