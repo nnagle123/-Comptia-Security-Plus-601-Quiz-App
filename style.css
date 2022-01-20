@@ -71,10 +71,12 @@ body{
     cursor: pointer;
 }
 
-.option:hover{
-    color: white;
-}
-
+@media (hover: hover) and (pointer: fine) {
+    .option:hover {
+        color: black;
+    }
+ }
+ 
 ol{
     position: relative;
     padding: 0 1.5rem;
@@ -160,6 +162,10 @@ button:active{
 /* Mobile */
 @media screen and (max-width: 480px) {
 
+    .questions {
+        width: 88vw;
+    }
+
     button{
         padding: 1rem 2.5rem;
         font-size: 1rem;
@@ -168,6 +174,7 @@ button:active{
 
     #title{
         font-size: 1.2rem;
+        padding: 1.5rem;
     }
 
     .option {
@@ -190,3 +197,4 @@ button:active{
         font-size: 1rem;
     }
 }
+
