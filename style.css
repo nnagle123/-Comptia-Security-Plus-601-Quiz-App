@@ -156,3 +156,37 @@ button:active{
     width: 65rem;
     top: 3rem;
 }
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+
+    button{
+        padding: 1rem 2.5rem;
+        font-size: 1rem;
+        border-radius: .75rem;
+    }
+
+    #title{
+        font-size: 1.2rem;
+    }
+
+    .option {
+        font-size: 1rem;
+    }
+
+    .radioicons {
+        margin-right: .5rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    #answerBank {
+        max-width: 95vw;
+    }
+
+    #answers {
+        font-size: 1rem;
+    }
+}
